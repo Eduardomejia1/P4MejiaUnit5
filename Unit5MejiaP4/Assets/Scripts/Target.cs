@@ -17,9 +17,9 @@ public class Target : MonoBehaviour
         targetRb = GetComponent<Rigidbody>();
 
         targetRb.AddForce(Vector3.up * Random.Range(minSpeed, maxSpeed), ForceMode.Impulse);
-        targetRb.AddTorque(Random.Range(-maxTorque, maxTorque), Random.Range(-10, 10), Random.Range(-10, 10), ForceMode.Impulse);
+        targetRb.AddTorque(Random.Range(-maxTorque, maxTorque), Random.Range(-maxTorque, maxTorque), Random.Range(-maxTorque, maxTorque), ForceMode.Impulse);
 
-        transform.position = new Vector3(Random.Range(-4, 4), -6);
+        transform.position = new Vector3(Random.Range(-xRange, xRange), ySpawnPos);
     }
 
     // Update is called once per frame
