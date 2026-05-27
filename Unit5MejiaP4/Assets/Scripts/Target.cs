@@ -47,11 +47,21 @@ public class Target : MonoBehaviour
     {
         Destroy(gameObject);
 
-        if(!gameObject.CompareTag("Bad"))
+        if(!gameObject.CompareTag("Bad") && gameManager.isGameActive)
         {
-            gameManager.GameOver();
+            gameManager.UpdateLives(-1);
         }
        
+    }
+
+    public void DestroyTarget()
+    {
+        if (gameManager.isGameActive)
+        {
+            Destroy(gameObject);
+            Instantiate(explosionParticle, transform.position, explosionParticle.transform.rotation);
+            gameManager.UpdateScore(pointValue);
+        }
     }
 
     Vector3 RandomForce()
