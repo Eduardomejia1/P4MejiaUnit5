@@ -618,7 +618,7 @@ GameObject:
   m_Component:
   - component: {fileID: 726363139}
   - component: {fileID: 726363141}
-  - component: {fileID: 726363140}
+  - component: {fileID: 726363143}
   m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
@@ -645,7 +645,15 @@ RectTransform:
   m_AnchoredPosition: {x: 150, y: -25}
   m_SizeDelta: {x: 300, y: -50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &726363140
+--- !u!222 &726363141
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 726363138}
+  m_CullTransparentMesh: 0
+--- !u!114 &726363143
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -736,14 +744,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!222 &726363141
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 726363138}
-  m_CullTransparentMesh: 0
 --- !u!1 &919200874
 GameObject:
   m_ObjectHideFlags: 0
@@ -1334,7 +1334,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1390857142}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1990770737}
+        m_TargetAssemblyTypeName: CountdownTimer, Assembly-CSharp
+        m_MethodName: StartTimer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1390857142
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2159,7 +2171,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1910376318}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1990770737}
+        m_TargetAssemblyTypeName: CountdownTimer, Assembly-CSharp
+        m_MethodName: StartTimer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1910376318
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2344,6 +2368,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1990770734}
   - component: {fileID: 1990770736}
+  - component: {fileID: 1990770737}
   m_Layer: 0
   m_Name: Count Down
   m_TagString: Untagged
@@ -2379,6 +2404,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1990770733}
   m_CullTransparentMesh: 0
+--- !u!114 &1990770737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1990770733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a626584a272fdb4abe59d3d1015e4f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeRemaining: 60
+  isTimerRunning: 0
+  timerText: {fileID: 726363143}
+  onTimerComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  gameOverText: {fileID: 919200876}
+  restartButton: {fileID: 1902351379}
+  isGameActive: 0
 --- !u!1 &2064518093
 GameObject:
   m_ObjectHideFlags: 0
@@ -2475,7 +2521,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2064518097}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1990770737}
+        m_TargetAssemblyTypeName: CountdownTimer, Assembly-CSharp
+        m_MethodName: StartTimer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2064518097
 MonoBehaviour:
   m_ObjectHideFlags: 0
